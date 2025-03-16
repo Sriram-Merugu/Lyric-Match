@@ -39,7 +39,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('../../api/generate-lyric');
+      const response = await fetch('http://localhost:8000/generate-lyric');
       if (!response.ok) {
         throw new Error('Error generating lyric snippet');
       }
@@ -64,7 +64,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('../../api/check-answer', {
+      const response = await fetch('http://localhost:8000/check-answer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
